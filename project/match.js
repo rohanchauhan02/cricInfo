@@ -26,23 +26,22 @@ function processMatch(html){
         let Name=teamName.split("innings")[0].trim();
         console.log(Name);
 
-        //batsman
-        // let teamTable=$(bothinnings[i]).find(".table.batsman tbody tr");
+        batsman
+        let teamTable=$(bothinnings[i]).find(".table.batsman tbody tr");
         
-        // for(let j=0;j<teamTable.length;j++){
-        //     let valid=$($(teamTable[j]).find("td")[0]).hasClass("batsman-cell");
-        //     if(valid){
-        //         let batsman=$($(teamTable[j]).find("td")[0]).text();
-        //         let run=$($(teamTable[j]).find("td")[2]).text();
-        //         let ball=$($(teamTable[j]).find("td")[3]).text();
-        //         let four=$($(teamTable[j]).find("td")[5]).text();
-        //         let six=$($(teamTable[j]).find("td")[6]).text();
-        //         let sr=$($(teamTable[j]).find("td")[7]).text();
-        //         console.log(batsman+"  "+run+"  "+ball+"  "+four+"  "+six+"  "+sr);
+        for(let j=0;j<teamTable.length;j++){
+            let valid=$($(teamTable[j]).find("td")[0]).hasClass("batsman-cell");
+            if(valid){
+                let batsman=$($(teamTable[j]).find("td")[0]).text();
+                let run=$($(teamTable[j]).find("td")[2]).text();
+                let ball=$($(teamTable[j]).find("td")[3]).text();
+                let four=$($(teamTable[j]).find("td")[5]).text();
+                let six=$($(teamTable[j]).find("td")[6]).text();
+                let sr=$($(teamTable[j]).find("td")[7]).text();
+                console.log(batsman+"  "+run+"  "+ball+"  "+four+"  "+six+"  "+sr);
 
-        //     }
-        // }
-        //     console.log("-----------------------");
+            }
+        }
     }
     console.log("*******************************************************");
 }
