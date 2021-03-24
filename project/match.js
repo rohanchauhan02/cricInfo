@@ -30,7 +30,11 @@ function processMatch(html){
         let Name=teamName.split()[0];
         console.log(Name);
 
+<<<<<<< HEAD
         //batsman
+=======
+        batsman
+>>>>>>> bc48d6263e3b68b3c0e42d8179b749b2d094c16c
         let teamTable=$(bothinnings[i]).find(".table.batsman tbody tr");
         
         for(let j=0;j<teamTable.length;j++){
@@ -42,12 +46,19 @@ function processMatch(html){
                 let four=$($(teamTable[j]).find("td")[5]).text();
                 let six=$($(teamTable[j]).find("td")[6]).text();
                 let sr=$($(teamTable[j]).find("td")[7]).text();
+<<<<<<< HEAD
                 // console.log(batsman+"  "+run+"  "+ball+"  "+four+"  "+six+"  "+sr);
                 processPlayer(Name,batsman,run,ball,four,six,sr);
 
             }
         }
             console.log("================================================");
+=======
+                console.log(batsman+"  "+run+"  "+ball+"  "+four+"  "+six+"  "+sr);
+
+            }
+        }
+>>>>>>> bc48d6263e3b68b3c0e42d8179b749b2d094c16c
     }
 }
 function excelReader(filePath,name){
